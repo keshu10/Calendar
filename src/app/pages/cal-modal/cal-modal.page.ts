@@ -6,7 +6,7 @@ import { ModalController, NavParams } from '@ionic/angular';
   templateUrl: './cal-modal.page.html',
   styleUrls: ['./cal-modal.page.scss'],
 })
-export class CalModalPage implements AfterViewInit {
+export class CalModalPage {
   calendar = {
     mode: 'month',
     currentDate: new Date()
@@ -28,8 +28,6 @@ export class CalModalPage implements AfterViewInit {
     this.eventData = this.navParam.get('eventData');
   }
 
-
- 
   closeModal() {
     this.modalCtrl.dismiss();
   }
